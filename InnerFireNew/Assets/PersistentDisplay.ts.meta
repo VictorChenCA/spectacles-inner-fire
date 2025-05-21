@@ -28,16 +28,15 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    storageKey: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - storageKey: sliderSelection
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - '// @input string storageKey = "sliderSelection" {"hint":"Key used to look up the saved value in persistent storage"}'
