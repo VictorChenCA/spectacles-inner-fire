@@ -14,30 +14,37 @@ export class SliderSizeEffects extends BaseScriptComponent {
     @input
     maxScale: number = 2.0
 
+    @input
+    @hint("Override starting value of the slider. Leave blank to use slider default.")
+    startValue: number = NaN
+
     private transform!: Transform
-    private slider: any
+    private sliderComponent: any
     private originalY: number = 0
 
     onAwake(): void {
         this.transform = this.targetObject.getTransform()
         this.originalY = this.transform.getLocalPosition().y
 
-        this.slider = this.sliderObject.getComponent("Component.ScriptComponent")
+        this.sliderComponent = this.sliderObject.getComponent("Component.ScriptComponent")
 
-        if (!this.slider || typeof this.slider.onValueUpdate?.add !== "function") {
+        if (!this.sliderComponent || typeof this.sliderComponent.onValueUpdate?.add !== "function") {
             throw new Error("Slider script with onValueUpdate event not found on the provided SceneObject.")
         }
 
         this.createEvent("OnStartEvent").bind(() => {
-            const value = this.slider.currentValue ?? this.slider.startValue
+            const value = isNaN(this.startValue)
+                ? this.sliderComponent.currentValue ?? this.sliderComponent.startValue
+                : this.startValue
+
             this.handleSliderUpdate(value)
-            this.slider.onValueUpdate.add(this.handleSliderUpdate)
+            this.sliderComponent.onValueUpdate.add(this.handleSliderUpdate)
         })
     }
 
     private handleSliderUpdate = (value: number): void => {
-        const min = this.slider.minValue
-        const max = this.slider.maxValue
+        const min = this.sliderComponent.minValue
+        const max = this.sliderComponent.maxValue
         const t = MathUtils.clamp((value - min) / (max - min), 0, 1)
 
         const scale = (this.minScale + (this.maxScale - this.minScale) * t) * 20

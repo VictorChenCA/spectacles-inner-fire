@@ -31,6 +31,7 @@
     maxScale: false
     minScale: false
     sliderObject: false
+    startValue: false
     targetObject: false
   ScriptTypesHidden:
     {}
@@ -41,6 +42,7 @@
       sliderObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       minScale: 0.500000
       maxScale: 1.500000
+      startValue: !<float> 0.000000
   ScriptTypes:
     -
       {}
@@ -49,3 +51,4 @@
     - '// @input SceneObject sliderObject {"hint":"SceneObject with the Slider script attached."}'
     - // @input float minScale = 0.5
     - // @input float maxScale = 2
+    - '// @input float startValue {"hint":"Override starting value of the slider. Leave blank to use slider default."}'
