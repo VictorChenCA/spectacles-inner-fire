@@ -39,4 +39,6 @@
     -
       {}
   InputLines:
+    - '// @input Component.Component textComponent {"hint":"Text component to update"}'
     - '// @input string storageKey = "sliderSelection" {"hint":"Key used to look up the saved value in persistent storage"}'
+    - '// @input float refreshIntervalSeconds = 2 {"hint":"Refresh interval in seconds"}'
