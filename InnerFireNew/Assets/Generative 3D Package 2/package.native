@@ -3,8 +3,8 @@
   StudioVersion:
     major: 5
     minor: 9
-    patch: 0
-    build: 25050505
+    patch: 1
+    build: 25051422
     type: Unset
   Description: Package with 3D asset created with Gen AI Suite.
   SvgIcon: |
@@ -18,7 +18,7 @@
   VersionMajor: 1
   VersionMinor: 0
   VersionPatch: 0
-  UpdateCheckpoint: 56
+  UpdateCheckpoint: 57
   ExportUid: 618b4563-15aa-45fe-ac69-bcd15f21ba36
   ComponentUid: 68d30dc7-e767-47a8-9e84-678255896d64
   CurrentVisibility: Locked

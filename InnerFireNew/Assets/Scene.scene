@@ -6939,6 +6939,22 @@
     bottom: -1.050000
     right: 5.000000
     top: 1.050000
+- !<ScriptComponent/63b4697a-d737-4bdc-8818-00b7b5d4c002>
+  PrefabRemaps:
+    []
+  Name: Untitled TypeScript
+  Enabled: true
+  ScriptAsset: !<reference> 28203a08-a21b-4865-a7ec-8d28eb39f421
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/64177a8b-8054-4a9d-a6df-974a02b004c1>
   PrefabRemaps:
     []
@@ -13204,6 +13220,7 @@
     - !<own> d48e58eb-45e2-416e-a98c-209fbfd65ff9
     - !<own> e9c57615-dda6-441f-b180-b168bc6a905d
     - !<own> 8fdee0a9-2d8f-4935-9938-fba9c4c49c7f
+    - !<own> 63b4697a-d737-4bdc-8818-00b7b5d4c002
 - !<SceneObject/bec767b4-d2eb-4f84-9c87-9ada0da91c24>
   PrefabRemaps:
     []
@@ -16586,7 +16603,7 @@
   PrefabRemaps:
     []
   Name: SliderExample
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -10.000000, z: 0.000000}
