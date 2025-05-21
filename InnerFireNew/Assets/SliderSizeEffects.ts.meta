@@ -28,16 +28,24 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    maxScale: false
+    minScale: false
+    sliderObject: false
+    targetObject: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sliderObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      minScale: 0.500000
+      maxScale: 1.500000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - "// @input SceneObject targetObject {\"hint\":\"SceneObject to scale based on the slider's value.\"}"
+    - '// @input SceneObject sliderObject {"hint":"SceneObject with the Slider script attached."}'
+    - // @input float minScale = 0.5
+    - // @input float maxScale = 2
