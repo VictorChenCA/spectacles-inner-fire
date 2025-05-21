@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/f5829788-c6fb-49cd-89b7-5a1a20016e85>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a930773b-dcf8-4ac0-8a1b-31a892efbd11
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a930773b-dcf8-4ac0-8a1b-31a892efbd11
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0f0e43a4-08dc-4f84-bfd3-da7f93af5515
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0f0e43a4-08dc-4f84-bfd3-da7f93af5515>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6c2e339c-a823-46e7-b626-24f9465b1ee8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    sliderObject: false
+    storageKey: false
+    targetToDisable: false
+    targetToEnable: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - sliderObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      storageKey: sliderSelection
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject sliderObject {"hint":"SceneObject with the Slider script attached"}'
+    - '// @input SceneObject targetToEnable {"hint":"Object to enable after selection is made"}'
+    - '// @input SceneObject targetToDisable {"hint":"Object to disable after selection is made (optional)"}'
+    - '// @input string storageKey = "sliderSelection" {"hint":"Persistent storage key name"}'
