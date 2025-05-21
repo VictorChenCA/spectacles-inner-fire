@@ -1,0 +1,52 @@
+studioVersion:
+  major: 5
+  minor: 9
+  patch: 0
+  build: 25050505
+  type: Public
+coreVersion: 309
+clientVersion: 13.380000
+updateCheckpoint: 56
+sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
+viewConfig:
+  simulation:
+    device: Spectacles (2024)
+    cameraFov: nan
+    fullFrameAspect: 0.666660
+    resolutionScale: 1.000000
+    viewport: Maximized
+    output: Live
+    stereoOutputEye: Center
+    deviceTypeOverride: Spectacles
+  cameraType: Front
+metaInfo:
+  hints:
+    []
+  tags:
+    []
+  lensName: InnerFire New
+  lensDescriptors:
+    - GEN_AI_ICON
+  lensApplicability:
+    - Front
+    - Back
+  lensClientCompatibilities:
+    - Spectacles
+  platformBundlesEnabled: false
+  iconHash: d64b0fcded809ae804217f048f12b326
+  videoPreviewHash: ""
+  fromTemplateName: Spectacles
+  fromTemplateUrl: Lens Studio 5.9.0.25050505
+  activationCamera: Front
+  sourceMapEnabled: false
+  usingMinClientVersions: false
+  androidMinClientVersion:
+    major: 0
+    minor: 0
+    patch: 0
+    build: 0
+  iOSMinClientVersion:
+    major: 0
+    minor: 0
+    patch: 0
+    build: 0
