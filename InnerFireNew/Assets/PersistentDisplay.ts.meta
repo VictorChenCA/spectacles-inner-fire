@@ -28,13 +28,17 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    refreshIntervalSeconds: false
     storageKey: false
+    textComponent: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - storageKey: sliderSelection
+    - textComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      storageKey: sliderSelection
+      refreshIntervalSeconds: !<float> 2.000000
   ScriptTypes:
     -
       {}

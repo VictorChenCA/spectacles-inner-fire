@@ -1,8 +1,8 @@
 @component
 export class PersistentDisplay extends BaseScriptComponent {
     @input
-    @hint("Text component to update")
-    textComponent!: Component;
+    @hint("Reference to parent TS script that exposes controls SceneObject")
+    parentScript!: any; // replace with 'SizeControlUI' type if defined
 
     @input
     @hint("Key used to look up the saved value in persistent storage")
@@ -12,17 +12,26 @@ export class PersistentDisplay extends BaseScriptComponent {
     @hint("Refresh interval in seconds")
     refreshIntervalSeconds: number = 2;
 
+    private textComponent: any;
     private timeElapsed: number = 0;
 
     onStart(): void {
-        if (!this.textComponent || this.textComponent.getTypeName() !== "Component.Text") {
-            throw new Error("❌ Provided component is not a valid Text component.");
+        const controls = this.parentScript?.controls;
+        if (!controls || controls.getTypeName() !== "SceneObject") {
+            throw new Error("❌ Could not access controls SceneObject from parent script.");
         }
 
-        // Do initial update immediately
-        this.updateDisplay();
+        const persistentObj = controls.getChild("Persistent");
+        if (!persistentObj) {
+            throw new Error("❌ 'Persistent' child not found in controls.");
+        }
 
-        // Set up update loop
+        this.textComponent = persistentObj.getComponent("Component.Text") as any;
+        if (!this.textComponent) {
+            throw new Error("❌ 'Persistent' does not have a valid Text component.");
+        }
+
+        this.updateDisplay();
         this.createEvent("UpdateEvent").bind(this.onUpdate);
     }
 
@@ -40,12 +49,11 @@ export class PersistentDisplay extends BaseScriptComponent {
         const store = global.persistentStorageSystem.store;
         const value = store.getInt(this.storageKey);
 
-        const textComp = this.textComponent as any;
         if (value === 0) {
-            textComp.text = "No saved value yet";
+            this.textComponent.text = "No saved value yet";
             print(`ℹ️ '${this.storageKey}' is 0 or not set.`);
         } else {
-            textComp.text = `Saved Value: ${value}`;
+            this.textComponent.text = `Saved Value: ${value}`;
             print(`🔁 Refreshed text: Saved Value: ${value}`);
         }
     }
