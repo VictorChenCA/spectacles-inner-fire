@@ -18,7 +18,7 @@ export class SliderSaveValue extends BaseScriptComponent {
 
     private sliderComponent: any;
     private hasSaved: boolean = false;
-    private touchEndBound: boolean = false;
+    private tapBound: boolean = false;
 
     onAwake(): void {
         this.sliderComponent = this.sliderObject.getComponent("Component.ScriptComponent");
@@ -32,12 +32,12 @@ export class SliderSaveValue extends BaseScriptComponent {
     }
 
     private onSliderChanged = (value: number): void => {
-        if (this.touchEndBound || this.hasSaved) return;
+        if (this.tapBound || this.hasSaved) return;
 
-        // Only bind to TouchEndEvent the first time value changes
-        this.createEvent("TouchEndEvent").bind(this.handleSliderRelease);
-        print("TouchEndEvent listener bound.");
-        this.touchEndBound = true;
+        // Bind to TapEvent instead of TouchEndEvent
+        this.createEvent("TapEvent").bind(this.handleSliderRelease);
+        print("TapEvent listener bound.");
+        this.tapBound = true;
     }
 
     private handleSliderRelease = (): void => {
@@ -50,10 +50,11 @@ export class SliderSaveValue extends BaseScriptComponent {
         const t = MathUtils.clamp((value - min) / (max - min), 0, 1);
         const scaledValue = Math.round(1 + 9 * t);
 
-        const store = global.persistentStorageSystem.store;
-        store.putInt(this.storageKey, scaledValue);
-
-        print(`Saved ${scaledValue} to persistent storage key: ${this.storageKey}`);
+        try {
+            global.persistentStorageSystem.store.putInt(this.storageKey, scaledValue);
+        } catch (e) {
+            print(`Storage failed: ${e}`);
+        }
 
         if (this.targetToDisable) {
             this.targetToDisable.enabled = false;

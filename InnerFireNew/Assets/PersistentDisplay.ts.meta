@@ -28,21 +28,21 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    parentScript: false
     refreshIntervalSeconds: false
     storageKey: false
-    textComponent: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - textComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+    - parentScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       storageKey: sliderSelection
       refreshIntervalSeconds: !<float> 2.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @input Component.Component textComponent {"hint":"Text component to update"}'
+    - '// @input AssignableType parentScript {"hint":"Reference to parent TS script that exposes controls SceneObject"}'
     - '// @input string storageKey = "sliderSelection" {"hint":"Key used to look up the saved value in persistent storage"}'
     - '// @input float refreshIntervalSeconds = 2 {"hint":"Refresh interval in seconds"}'
