@@ -5,6 +5,10 @@ export class SliderSaveValue extends BaseScriptComponent {
     sliderObject!: SceneObject;
 
     @input
+    @hint("SceneObject with the Interactable (e.g. the knob)")
+    interactableObject!: SceneObject;
+
+    @input
     @hint("Object to enable after selection is made")
     targetToEnable!: SceneObject;
 
@@ -18,7 +22,7 @@ export class SliderSaveValue extends BaseScriptComponent {
 
     private sliderComponent: any;
     private hasSaved: boolean = false;
-    private tapBound: boolean = false;
+    private triggerBound: boolean = false;
 
     onAwake(): void {
         this.sliderComponent = this.sliderObject.getComponent("Component.ScriptComponent");
@@ -27,18 +31,21 @@ export class SliderSaveValue extends BaseScriptComponent {
             throw new Error("Slider script with onValueUpdate event not found.");
         }
 
-        // Wait for first interaction
         this.sliderComponent.onValueUpdate.add(this.onSliderChanged);
     }
 
     private onSliderChanged = (value: number): void => {
-        if (this.tapBound || this.hasSaved) return;
+        if (this.triggerBound || this.hasSaved) return;
 
-        // Bind to TapEvent instead of TouchEndEvent
-        this.createEvent("TapEvent").bind(this.handleSliderRelease);
-        print("TapEvent listener bound.");
-        this.tapBound = true;
-    }
+        const interactable = this.interactableObject.getComponent("Component.ScriptComponent");
+        if (!interactable || typeof interactable["onTriggerEnd"]?.add !== "function") {
+            throw new Error("Interactable with onTriggerEnd not found on interactableObject.");
+        }
+
+        interactable["onTriggerEnd"].add(this.handleSliderRelease);
+        print("Bound to onTriggerEnd of knob.");
+        this.triggerBound = true;
+    };
 
     private handleSliderRelease = (): void => {
         if (this.hasSaved) return;
@@ -56,14 +63,9 @@ export class SliderSaveValue extends BaseScriptComponent {
             print(`Storage failed: ${e}`);
         }
 
-        if (this.targetToDisable) {
-            this.targetToDisable.enabled = false;
-        }
-
-        if (this.targetToEnable) {
-            this.targetToEnable.enabled = true;
-        }
+        if (this.targetToDisable) this.targetToDisable.enabled = false;
+        if (this.targetToEnable) this.targetToEnable.enabled = true;
 
         this.hasSaved = true;
-    }
+    };
 }

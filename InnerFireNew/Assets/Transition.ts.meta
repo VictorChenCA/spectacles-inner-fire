@@ -28,16 +28,24 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    disableObjectA: false
+    disableObjectB: false
+    enableObjectA: false
+    enableObjectB: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - enableObjectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      enableObjectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      disableObjectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      disableObjectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input SceneObject enableObjectA
+    - // @input SceneObject enableObjectB
+    - // @input SceneObject disableObjectA
+    - // @input SceneObject disableObjectB
