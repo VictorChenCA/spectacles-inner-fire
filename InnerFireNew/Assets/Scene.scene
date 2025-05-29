@@ -1211,7 +1211,7 @@
     - 8d016d6b-b876-40f4-8ca0-3e12002eec3d: d4131e05-62e6-47c0-bfb7-fc33f3ef3aa7
     - 9fb5c34c-e060-41c1-9821-6c344134531f: eafa2e24-31b0-4f61-94fe-cb40ebcee1d5
   Name: stone ring model
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -10.000000, y: 0.000000, z: 0.000000}
@@ -1494,7 +1494,7 @@
     - c4c61146-f7cd-4df9-8829-31c7eed2e6ca: c15e6eaf-9081-4644-a3e3-159d66a7f42e
     - c59fb1c9-ca95-40bb-bac9-8e24602dbc82: 703f982c-c1ba-4810-88f1-ade87ca37b65
   Name: fire model 3
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -10.000000, y: 9.000000, z: 0.000000}
@@ -15489,7 +15489,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: |
-    What would you like to jounal about?
+    What would you like to journal about?
 
   Editable: false
   ShowEditingPreview: true
@@ -16119,7 +16119,7 @@
   PrefabRemaps:
     []
   Name: Display - Acknowledge
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -40.000000, z: -150.000000}
@@ -19564,7 +19564,7 @@
   PrefabRemaps:
     []
   Name: Display - Intro
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -20159,7 +20159,7 @@
     - d3973c49-e442-4634-b34c-dc4f873005a1: e836db7f-16b4-488c-9439-77dad248b786
     - fdc38f00-edda-4c5c-8417-4632c032776b: 584b0839-5226-4f65-aeef-608b82461083
   Name: wood fuel model
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -10.000000, y: 2.000000, z: 0.000000}
