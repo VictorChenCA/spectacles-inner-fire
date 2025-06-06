@@ -1323,9 +1323,9 @@
   ScriptInputs:
     "":
       enableObjectA: !<reference.SceneObject> f70475f9-3a18-41ca-bf41-a37f4a380c9e
-      enableObjectB: !<reference.SceneObject> 9a1d823c-60c9-44a2-b9a5-21705fd22f5d
+      enableObjectB: !<reference.SceneObject> bbd43c7c-4c7b-4283-8fd3-61d514955ee3
       disableObjectA: !<reference.SceneObject> ccae47a3-10d2-4ff7-9c22-6eff73113491
-      disableObjectB: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
+      disableObjectB: !<reference.SceneObject> ed346a23-fdbe-4c95-90a9-522c70fbf6ba
   ScriptTypes:
     "":
       {}
@@ -3983,10 +3983,10 @@
   UnitType: World
   SortingType: Hierarchy
   WorldSpaceRect:
-    left: -14.000000
-    bottom: -3.000000
-    right: 14.000000
-    top: 3.000000
+    left: -16.000000
+    bottom: -4.000000
+    right: 16.000000
+    top: 4.000000
 - !<SceneObject/2a443e01-9477-4c56-94d3-60a3dc5bbbd2>
   PrefabRemaps:
     []
@@ -6727,7 +6727,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -5.000000, z: 2.000000}
+    position: {x: 0.000000, y: -6.000000, z: 2.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -6754,10 +6754,10 @@
   UnitType: World
   SortingType: Hierarchy
   WorldSpaceRect:
-    left: -14.000000
-    bottom: -3.000000
-    right: 14.000000
-    top: 3.000000
+    left: -16.000000
+    bottom: -4.000000
+    right: 16.000000
+    top: 4.000000
 - !<SceneObject/4a26b91d-bdcd-47f5-9786-e26c1fdbd7f6>
   PrefabRemaps:
     []
@@ -8514,7 +8514,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -20.000000, z: 2.000000}
+    position: {x: 0.000000, y: -24.000000, z: 2.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -9946,7 +9946,7 @@
   PrefabRemaps:
     []
   Name: Display - Slider
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -13406,7 +13406,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 9.990000, z: 2.000000}
+    position: {x: 0.000000, y: 11.000000, z: 2.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -13893,7 +13893,7 @@
   PrefabRemaps:
     []
   Name: Display - options
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -16458,7 +16458,7 @@
   PrefabRemaps:
     []
   Name: Container
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -19168,10 +19168,10 @@
   UnitType: World
   SortingType: Hierarchy
   WorldSpaceRect:
-    left: -14.000000
-    bottom: -3.000000
-    right: 14.000000
-    top: 3.000000
+    left: -16.000000
+    bottom: -4.000000
+    right: 16.000000
+    top: 4.000000
 - !<Skin/dbebaa3a-0e97-4718-b67b-5801ffb12230>
   PrefabRemaps:
     []
@@ -21654,7 +21654,7 @@
   PrefabRemaps:
     []
   Name: Display - Intro
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
