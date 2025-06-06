@@ -1,0 +1,87 @@
+- !<AssetImportMetadata/3a7328e3-068c-4790-ad3d-3e64ec2a1d31>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7f4b28c3-ca43-4a50-83c8-c375f3f0726a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7f4b28c3-ca43-4a50-83c8-c375f3f0726a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ebc880ec-7c18-4c20-b53c-4724c0b70e32
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ebc880ec-7c18-4c20-b53c-4724c0b70e32>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 2c09fd7c-a060-4f8f-a951-74a23822f9fb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    baseScale: false
+    collisionDistance: false
+    disableObject1: false
+    disableObject2: false
+    enableObject1: false
+    enableObject2: false
+    flickerAmplitude: false
+    flickerFrequency: false
+    flickerTarget: false
+    objectA: false
+    objectB: false
+    particle1: false
+    particle2: false
+    particle3: false
+    particle4: false
+    particle5: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - objectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      collisionDistance: 0.100000
+      enableObject1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      enableObject2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      disableObject1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      disableObject2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      particle1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      particle2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      particle3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      particle4: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      particle5: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      flickerTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      baseScale: !<float> 1.000000
+      flickerAmplitude: 0.300000
+      flickerFrequency: !<float> 8.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject objectA
+    - // @input SceneObject objectB
+    - // @input float collisionDistance = 0.1
+    - // @input SceneObject enableObject1
+    - // @input SceneObject enableObject2
+    - // @input SceneObject disableObject1
+    - // @input SceneObject disableObject2
+    - // @input SceneObject particle1
+    - // @input SceneObject particle2
+    - // @input SceneObject particle3
+    - // @input SceneObject particle4
+    - // @input SceneObject particle5
+    - // @input SceneObject flickerTarget
+    - // @input float baseScale = 1
+    - // @input float flickerAmplitude = 0.3
+    - // @input float flickerFrequency = 8

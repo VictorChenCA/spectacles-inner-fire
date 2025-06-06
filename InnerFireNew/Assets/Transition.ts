@@ -32,7 +32,6 @@ export class Transition extends BaseScriptComponent {
             //print(`🚫 Disabling: ${this.disableObjectA?.name}, ${this.disableObjectB?.name}`);
             if (this.disableObjectA) this.disableObjectA.enabled = false;
             if (this.disableObjectB) this.disableObjectB.enabled = false;
-            print(`🔍 Press handler1 state: ${this.enableObjectA?.name} enabled = ${this.enableObjectA?.enabled}`);
         } catch (e) {
             print("Transition error: " + e);
         }
