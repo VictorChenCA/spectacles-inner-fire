@@ -28,7 +28,7 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    globalKey: false
+    storageKey: false
     valueToSave: false
   ScriptTypesHidden:
     {}
@@ -36,10 +36,10 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - valueToSave: !<float> 0.000000
-      globalKey: promptChoice
+      storageKey: promptChoice
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input float valueToSave
-    - '// @input string globalKey = "promptChoice"'
+    - '// @input string storageKey = "promptChoice"'

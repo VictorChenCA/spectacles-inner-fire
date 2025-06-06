@@ -14,9 +14,6 @@
     - !<own> 71bd036c-73b7-4c98-8086-fe9d46e31aeb
     - !<own> ccae47a3-10d2-4ff7-9c22-6eff73113491
     - !<own> 9a1d823c-60c9-44a2-b9a5-21705fd22f5d
-    - !<own> ac1a91af-21de-4a76-a92a-b73cafe322d4
-    - !<own> 0e50ba6d-f73d-49ea-a075-656c53823fcc
-    - !<own> 9cf5286c-3823-4a25-a68d-3000cdc85dc4
     - !<own> 28954f43-fd4e-442a-838f-742e34372804
     - !<own> a719a854-46ec-4c81-9343-9077a47b0975
     - !<own> f446905a-f8fb-44cf-b002-0c54253d2748
@@ -1432,40 +1429,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/0e50ba6d-f73d-49ea-a075-656c53823fcc>
-  PrefabRemaps:
-    []
-  Name: Press handler2
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: -17.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> aee3565d-ff5a-4980-9aa3-0cf32f582548
-- !<ScriptComponent/0ed3936e-8502-4dfa-ad5e-6e64d2599270>
-  PrefabRemaps:
-    []
-  Name: DisplaySavedText
-  Enabled: true
-  ScriptAsset: !<reference> 827f10d8-3e95-46a5-8ee2-707870377bfb
-  ScriptInputsDefault:
-    sliderKey: true
-    promptIndexKey: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      targetTextObject: !<reference.SceneObject> 17016e2c-a1d3-4b64-a83b-4833634ae6ec
-      sliderKey: sliderSelection
-      promptIndexKey: promptSelection
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/0f0def93-8f7e-4298-a364-f2b061d09f79>
   PrefabRemaps:
     []
@@ -1788,7 +1751,7 @@
   PrefabRemaps:
     []
   Name: Done
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -8.000000, z: 2.000000}
@@ -2292,7 +2255,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 20.000000, z: 2.000000}
+    position: {x: 0.000000, y: 18.000000, z: 2.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -2300,7 +2263,6 @@
     []
   Components:
     - !<own> 83bac688-7b6f-4c0f-bee7-afb413cc515f
-    - !<own> 0ed3936e-8502-4dfa-ad5e-6e64d2599270
 - !<Canvas/1706a53d-674d-491e-b9cb-5420be1a30fe>
   PrefabRemaps:
     []
@@ -3689,24 +3651,6 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
-- !<ScriptComponent/22f2a500-bed1-4950-933c-81d6a1679b88>
-  PrefabRemaps:
-    []
-  Name: SaveNumberOnEnable
-  Enabled: true
-  ScriptAsset: !<reference> 98cec065-3f30-4cf7-b504-5b72e524c335
-  ScriptInputsDefault:
-    storageKey: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      valueToStore: !<float> 3.000000
-      storageKey: savedNumber
-      targetToEnable: !<reference.SceneObject> 17016e2c-a1d3-4b64-a83b-4833634ae6ec
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/231578e6-6d67-4904-bff5-e542eb40cc72>
   PrefabRemaps:
     []
@@ -3722,22 +3666,6 @@
     []
   Components:
     - !<own> a74f175b-3788-43ca-aeaf-59d297da1953
-- !<ScriptComponent/2531875d-2025-46b2-8f3f-54f043a09a66>
-  PrefabRemaps:
-    []
-  Name: API Call
-  Enabled: true
-  ScriptAsset: !<reference> f89a9b0f-a71e-4877-9aa9-f11d75d5996e
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<BodyComponent/2565195a-7d4f-4aae-ac3f-4b2fcfcf5241>
   PrefabRemaps:
     []
@@ -5128,6 +5056,82 @@
     bottom: -20.000000
     right: 15.000000
     top: 20.000000
+- !<Text/345a54f2-6a50-4af3-af7d-f88db0c4ab42>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 9
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: "Great Job!  Here's your log of the day!"
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 36
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<ScriptComponent/34bdc88e-bf3c-4f76-a1b3-d725bd2ed120>
   PrefabRemaps:
     []
@@ -6330,6 +6334,23 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/43b7520d-0f39-4254-b8a1-58f9bfc03f62>
+  PrefabRemaps:
+    []
+  Name: SaveToPersistentStorage
+  Enabled: true
+  ScriptAsset: !<reference> 6e885e6c-d930-4990-88d8-1ed97ccccb67
+  ScriptInputsDefault:
+    storageKey: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      valueToSave: !<float> 1.000000
+      storageKey: promptChoice
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/43c0a925-32d5-4fe2-8d8b-0859ebf24282>
   PrefabRemaps:
     []
@@ -6892,6 +6913,7 @@
     - !<own> 83ca6ba9-bda7-43ca-bd7a-e327014fde40
     - !<own> 2119d9bf-f5cb-409a-a133-1c67fc2db95e
     - !<own> 985f7c86-3778-420a-a752-ddb7b64fd760
+    - !<own> 43b7520d-0f39-4254-b8a1-58f9bfc03f62
     - !<own> cc9189ae-ccb3-465d-a7c1-693d884cc295
 - !<Canvas/4a22d951-75d1-4fc1-a3d6-2b3eed43e91b>
   PrefabRemaps:
@@ -8440,7 +8462,7 @@
     {}
   ScriptInputs:
     "":
-      enableObjectA: !<reference.SceneObject> ac1a91af-21de-4a76-a92a-b73cafe322d4
+      enableObjectA: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
       enableObjectB: !<reference.SceneObject> a719a854-46ec-4c81-9343-9077a47b0975
       disableObjectA: !<reference.SceneObject> 9a1d823c-60c9-44a2-b9a5-21705fd22f5d
       disableObjectB: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
@@ -8678,8 +8700,8 @@
     - !<own> 7dd0b80e-21ac-40b4-ba0f-c222fd08dc67
     - !<own> c92cdc7b-d3e2-4cb1-9e9f-b28772d7913b
     - !<own> 0cb9f323-d184-45c9-89f3-01edfa34f007
+    - !<own> fed4e62e-1515-4b80-b3c4-588b7567b673
     - !<own> 5f3fbf17-643d-44e7-903e-62675cfc137e
-    - !<own> 2531875d-2025-46b2-8f3f-54f043a09a66
 - !<SceneObject/5e78137f-c83d-4251-afde-2b502a0bd5aa>
   PrefabRemaps:
     []
@@ -8812,7 +8834,7 @@
     {}
   ScriptInputs:
     "":
-      enableObjectA: !<reference.SceneObject> 9cf5286c-3823-4a25-a68d-3000cdc85dc4
+      enableObjectA: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
       enableObjectB: !<reference.SceneObject> a719a854-46ec-4c81-9343-9077a47b0975
       disableObjectA: !<reference.SceneObject> 9a1d823c-60c9-44a2-b9a5-21705fd22f5d
       disableObjectB: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
@@ -9057,6 +9079,22 @@
       squishObject: !<reference.SceneObject> d721ae0a-cf89-4df3-840d-ec2c532d7fb9
       verticalSquish: 0.900000
       horizontalSquish: 0.900000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/63f8b1be-08a7-43bc-a445-72d4f0cce33a>
+  PrefabRemaps:
+    []
+  Name: EnableObjectOnTriggerEnd
+  Enabled: true
+  ScriptAsset: !<reference> 4c608116-f85d-4d1a-ba6a-bb5adee78f8a
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetToEnable: !<reference.SceneObject> 118d8221-0404-441a-90f5-37b9ccdbdb35
   ScriptTypes:
     "":
       {}
@@ -10470,6 +10508,25 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/7736d6fa-276d-4e30-9c96-1f0aba667102>
+  PrefabRemaps:
+    []
+  Name: DynamicPromptLoader
+  Enabled: true
+  ScriptAsset: !<reference> 827f10d8-3e95-46a5-8ee2-707870377bfb
+  ScriptInputsDefault:
+    sliderKey: true
+    promptKey: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetTextObject: !<reference.SceneObject> 17016e2c-a1d3-4b64-a83b-4833634ae6ec
+      sliderKey: sliderSelection
+      promptKey: promptChoice
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/773eded5-7ed0-4f48-a7de-84add7e59e98>
   PrefabRemaps:
     []
@@ -10807,6 +10864,7 @@
     - !<own> 88c752c4-8b15-4338-a2d0-c1a85880ee3a
     - !<own> ace56f71-5f5c-4ee1-a1be-c6a6da0617a5
     - !<own> f35d2727-07e9-408d-839b-7281f8ae8805
+    - !<own> 63f8b1be-08a7-43bc-a445-72d4f0cce33a
 - !<SceneObject/79e2b4ac-b59f-4ba4-85d2-5e2cb358c2e9>
   PrefabRemaps:
     []
@@ -11914,12 +11972,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Journal Prompt:"
+  Text: "Prompt:"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 30
+  FontSize: 36
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -7.500000
@@ -12592,6 +12650,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/8ad87de4-fd43-49c5-986d-b5dbdb6fd232>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 18.000000, z: 2.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 2.000000, y: 2.000000, z: 2.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 345a54f2-6a50-4af3-af7d-f88db0c4ab42
 - !<SceneObject/8b1597e7-0f83-4295-a17b-d12cd299f954>
   PrefabRemaps:
     []
@@ -13630,6 +13703,7 @@
     - !<own> 02f91c8a-1018-4307-a8bb-d2b2403d078b
     - !<own> 7161d9b6-b8dc-4942-9e5d-a0bdf15f24d9
     - !<own> a327d769-ce0f-4a3c-87ca-3a9c05012317
+    - !<own> c2ac8eca-4773-4c2c-9fc0-677a9ac54780
     - !<own> 5aadb0fc-d62f-43df-bf9f-4ff1264bae8f
 - !<ScriptComponent/984aff82-3356-4f08-ad6b-f0d160f9c0ee>
   PrefabRemaps:
@@ -14114,7 +14188,7 @@
   PrefabRemaps:
     []
   Name: Display - options
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -14294,21 +14368,6 @@
   Components:
     - !<own> 560c958b-08d1-4f8c-b2a1-9eed56573897
     - !<own> de249707-830a-4e22-869c-8b90a49afaf8
-- !<SceneObject/9cf5286c-3823-4a25-a68d-3000cdc85dc4>
-  PrefabRemaps:
-    []
-  Name: Press handler3
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: -35.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 22f2a500-bed1-4950-933c-81d6a1679b88
 - !<SceneObject/9d4c61c5-b271-41c6-9107-00e000ba3c74>
   PrefabRemaps:
     []
@@ -14954,6 +15013,7 @@
     - !<own> 0adc4134-4948-45ae-a0eb-8073c373bd0a
   Components:
     - !<own> 66d569cc-f175-48dc-bf99-cfb3621bcb2d
+    - !<own> 7736d6fa-276d-4e30-9c96-1f0aba667102
 - !<ScriptComponent/a7389de5-21c3-46a4-b5a3-28bf73dd0108>
   PrefabRemaps:
     []
@@ -15493,21 +15553,6 @@
     - !<own> 10568179-3897-4527-83b6-b6018cff9f28
   Components:
     []
-- !<SceneObject/ac1a91af-21de-4a76-a92a-b73cafe322d4>
-  PrefabRemaps:
-    []
-  Name: Press handler1
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> bfb433b2-0885-42ec-8c60-4c2093e2ed6a
 - !<SceneObject/ac49ca23-e4a4-460c-8b4f-fbf0c650289d>
   PrefabRemaps:
     []
@@ -15806,24 +15851,6 @@
   Components:
     - !<own> ef53296a-1bde-436c-8ab8-91022dee35f0
     - !<own> 3ca983bc-fef7-4aba-9868-aa3d6879dca9
-- !<ScriptComponent/aee3565d-ff5a-4980-9aa3-0cf32f582548>
-  PrefabRemaps:
-    []
-  Name: SaveNumberOnEnable
-  Enabled: true
-  ScriptAsset: !<reference> 98cec065-3f30-4cf7-b504-5b72e524c335
-  ScriptInputsDefault:
-    storageKey: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      valueToStore: !<float> 2.000000
-      storageKey: savedNumber
-      targetToEnable: !<reference.SceneObject> 17016e2c-a1d3-4b64-a83b-4833634ae6ec
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/af0d4816-2e47-4d2c-bace-8a6b03e51d0f>
   PrefabRemaps:
     []
@@ -16786,14 +16813,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    Pinch and hold
-     to record!
+  Text: Pinch & hold!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 64
+  FontSize: 40
   Font: !<reference> 709203b6-8b83-40d7-8dda-e5adc4fd2875
   LayoutRect:
     left: -7.500000
@@ -17013,24 +17038,6 @@
       _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
       _playAudioOnTriggerEnd: true
       _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/bfb433b2-0885-42ec-8c60-4c2093e2ed6a>
-  PrefabRemaps:
-    []
-  Name: SaveNumberOnEnable
-  Enabled: true
-  ScriptAsset: !<reference> 98cec065-3f30-4cf7-b504-5b72e524c335
-  ScriptInputsDefault:
-    storageKey: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      valueToStore: !<float> 1.000000
-      storageKey: savedNumber
-      targetToEnable: !<reference.SceneObject> 17016e2c-a1d3-4b64-a83b-4833634ae6ec
   ScriptTypes:
     "":
       {}
@@ -17320,6 +17327,24 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/c2ac8eca-4773-4c2c-9fc0-677a9ac54780>
+  PrefabRemaps:
+    []
+  Name: SaveToPersistentStorage
+  Enabled: true
+  ScriptAsset: !<reference> 6e885e6c-d930-4990-88d8-1ed97ccccb67
+  ScriptInputsDefault:
+    valueToSave: true
+    storageKey: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      valueToSave: !<float> 0.000000
+      storageKey: promptChoice
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/c2b75f02-578e-4b5b-9f66-e7858128e5bc>
   PrefabRemaps:
     []
@@ -18293,7 +18318,7 @@
     {}
   ScriptInputs:
     "":
-      enableObjectA: !<reference.SceneObject> 0e50ba6d-f73d-49ea-a075-656c53823fcc
+      enableObjectA: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
       enableObjectB: !<reference.SceneObject> a719a854-46ec-4c81-9343-9077a47b0975
       disableObjectA: !<reference.SceneObject> 9a1d823c-60c9-44a2-b9a5-21705fd22f5d
       disableObjectB: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
@@ -18319,7 +18344,7 @@
   PrefabRemaps:
     []
   Name: Display - Acknowledge
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -19440,7 +19465,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -18.000000, y: 7.000000, z: 4.000000}
+    position: {x: -4.000000, y: 10.000000, z: 4.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -21946,6 +21971,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
+    - !<own> 8ad87de4-fd43-49c5-986d-b5dbdb6fd232
     - !<own> d1d30270-cd52-4fe0-ba2c-4970f2fdf268
   Components:
     []
@@ -22745,6 +22771,23 @@
     - !<own> 929164ef-2d41-474a-a457-1bf03d6cd9f1
   Components:
     []
+- !<ScriptComponent/fed4e62e-1515-4b80-b3c4-588b7567b673>
+  PrefabRemaps:
+    []
+  Name: SaveToPersistentStorage
+  Enabled: true
+  ScriptAsset: !<reference> 6e885e6c-d930-4990-88d8-1ed97ccccb67
+  ScriptInputsDefault:
+    storageKey: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      valueToSave: !<float> 2.000000
+      storageKey: promptChoice
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/ff00fd06-2a81-4c72-8a38-be5ce54834ff>
   PrefabRemaps:
     []
