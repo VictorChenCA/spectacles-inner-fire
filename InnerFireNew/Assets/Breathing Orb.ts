@@ -1,30 +1,19 @@
 @component
 export class BreathingScaleGuide extends BaseScriptComponent {
-    @input
-    textObject1!: SceneObject;
-    @input
-    textObject2!: SceneObject;
-    @input
-    targetObject!: SceneObject;
+    @input textObject1!: SceneObject;
+    @input textObject2!: SceneObject;
+    @input targetObject!: SceneObject;
 
-    @input
-    originalScale: vec3 = new vec3(0.3, 0.3, 0.3);
-    @input
-    targetScale: vec3 = new vec3(0.9, 0.9, 0.9);
+    @input originalScale: vec3 = new vec3(0.3, 0.3, 0.3);
+    @input targetScale: vec3 = new vec3(0.9, 0.9, 0.9);
 
-    @input
-    duration: number = 4;
-    @input
-    pauseDuration: number = 4;
+    @input duration: number = 4;
+    @input pauseDuration: number = 3;
 
-    @input
-    targetToEnable1!: SceneObject;
-    @input
-    targetToEnable2!: SceneObject;
-    @input
-    targetToDisable1!: SceneObject;
-    @input
-    targetToDisable2!: SceneObject;
+    @input targetToEnable1!: SceneObject;
+    @input targetToEnable2!: SceneObject;
+    @input targetToDisable1!: SceneObject;
+    @input targetToDisable2!: SceneObject;
 
     private primaryText!: Text;
     private secondaryText!: Text;
@@ -38,6 +27,7 @@ export class BreathingScaleGuide extends BaseScriptComponent {
     private lastCountdownIndex = -1;
     private readyShown = false;
     private textFrozen = false;
+    private transitionDone = false;
 
     private readonly labels = [
         "Inhale through your nose",
@@ -56,7 +46,7 @@ export class BreathingScaleGuide extends BaseScriptComponent {
         }
 
         this.transform.setLocalScale(this.originalScale);
-        this.primaryText.text = "Let's start with a deep breath"; // Fix: show this from the beginning
+        this.primaryText.text = "Let's start with a few deep breaths.";
         this.secondaryText.text = "";
 
         this.createEvent("UpdateEvent").bind(this.onUpdate);
@@ -66,9 +56,10 @@ export class BreathingScaleGuide extends BaseScriptComponent {
         const dt = getDeltaTime();
         this.timer += dt;
 
-        const isFirstCycle = this.currentLoop === 0;
+        const isFinalRound = this.currentLoop === this.totalLoops - 1;
+        const stillInIntro = this.currentLoop === 0 && this.phase < 4;
 
-        // Scale animation for inhale/exhale only
+        // --- Scaling ---
         if (this.phase === 0) {
             const t = this.smoothstep(this.timer / this.duration);
             this.transform.setLocalScale(vec3.lerp(this.originalScale, this.targetScale, t));
@@ -77,48 +68,61 @@ export class BreathingScaleGuide extends BaseScriptComponent {
             this.transform.setLocalScale(vec3.lerp(this.targetScale, this.originalScale, t));
         }
 
-        // Countdown: Show 3-2-1 during all phases, in all cycles
+        // --- Countdown + "Ready?" Logic ---
         const phaseDuration = this.getPhaseDuration(this.phase);
         const countdown = this.getCountdownSequence(phaseDuration);
         const slice = phaseDuration / countdown.length;
         const index = Math.floor(this.timer / slice);
 
         if (index !== this.lastCountdownIndex && index < countdown.length) {
-            // Special case: Ready? first during first cycle exhale
-            if (isFirstCycle && this.phase === 2 && !this.readyShown) {
-                this.secondaryText.text = "Ready?";
-                this.readyShown = true;
-                this.lastCountdownIndex = -1;
+            this.lastCountdownIndex = index;
+
+            if (stillInIntro) {
+                if (this.phase === 2 && !this.readyShown) {
+                    this.secondaryText.text = "Ready?";
+                    this.readyShown = true;
+                } else if (this.phase === 3) {
+                    // Show countdown in 1.4 only
+                    this.secondaryText.text = countdown[index];
+                } else if (this.phase < 2) {
+                    // No text during 1.1 and 1.2
+                    this.secondaryText.text = "";
+                }
+                // Do NOT update text during 1.3 if "Ready?" was just shown
             } else {
                 this.secondaryText.text = countdown[index];
-                this.lastCountdownIndex = index;
             }
         }
 
-        // Phase complete
+        // --- Phase Transition ---
         if (this.timer >= phaseDuration) {
+            if (!this.transitionDone && isFinalRound && this.phase === 3) {
+                this.finishCycle();
+                this.transitionDone = true;
+                return;
+            }
+
             this.timer = 0;
             this.phase++;
             this.lastCountdownIndex = -1;
+
+            // Don't erase "Ready?" in 1.3 until the end of that phase
+            if (!(stillInIntro && this.phase === 3)) {
+                this.secondaryText.text = "";
+            }
+
             this.readyShown = false;
 
             if (this.phase >= 4) {
                 this.currentLoop++;
                 this.phase = 0;
-
-                if (this.currentLoop >= this.totalLoops) {
-                    this.finishCycle();
-                    return;
-                }
             }
 
             if (!this.textFrozen) {
-                if (isFirstCycle) {
-                    this.primaryText.text = "Let's start with a deep breath";
-                    this.secondaryText.text = "";
+                if (this.currentLoop === 0 && this.phase < 4) {
+                    this.primaryText.text = "Let's start with a few deep breaths.";
                 } else {
                     this.primaryText.text = this.labels[this.phase];
-                    this.secondaryText.text = "";
                 }
             }
         }

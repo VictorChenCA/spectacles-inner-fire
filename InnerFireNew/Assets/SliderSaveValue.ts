@@ -28,10 +28,12 @@ export class SliderSaveValue extends BaseScriptComponent {
         this.sliderComponent = this.sliderObject.getComponent("Component.ScriptComponent");
 
         if (!this.sliderComponent || typeof this.sliderComponent.onValueUpdate?.add !== "function") {
-            throw new Error("Slider script with onValueUpdate event not found.");
+            print("❌ Slider script not found or missing onValueUpdate event.");
+            return;
         }
 
         this.sliderComponent.onValueUpdate.add(this.onSliderChanged);
+        print("✅ SliderSaveValue initialized and listening for value changes.");
     }
 
     private onSliderChanged = (value: number): void => {
@@ -39,12 +41,13 @@ export class SliderSaveValue extends BaseScriptComponent {
 
         const interactable = this.interactableObject.getComponent("Component.ScriptComponent");
         if (!interactable || typeof interactable["onTriggerEnd"]?.add !== "function") {
-            throw new Error("Interactable with onTriggerEnd not found on interactableObject.");
+            print("❌ Interactable script missing or onTriggerEnd not found.");
+            return;
         }
 
         interactable["onTriggerEnd"].add(this.handleSliderRelease);
-        print("Bound to onTriggerEnd of knob.");
         this.triggerBound = true;
+        print("✅ Bound to onTriggerEnd of knob.");
     };
 
     private handleSliderRelease = (): void => {
@@ -59,12 +62,24 @@ export class SliderSaveValue extends BaseScriptComponent {
 
         try {
             global.persistentStorageSystem.store.putInt(this.storageKey, scaledValue);
+            print(`✅ Stored value ${scaledValue} under key "${this.storageKey}".`);
         } catch (e) {
-            print(`Storage failed: ${e}`);
+            print(`❌ Storage failed for key "${this.storageKey}": ${e}`);
         }
 
-        if (this.targetToDisable) this.targetToDisable.enabled = false;
-        if (this.targetToEnable) this.targetToEnable.enabled = true;
+        if (this.targetToEnable) {
+            this.targetToEnable.enabled = true;
+            print("✅ targetToEnable has been enabled.");
+        } else {
+            print("⚠️ targetToEnable is not assigned.");
+        }
+
+        if (this.targetToDisable) {
+            this.targetToDisable.enabled = false;
+            print("✅ targetToDisable has been disabled.");
+        } else {
+            print("⚠️ targetToDisable is not assigned.");
+        }
 
         this.hasSaved = true;
     };
