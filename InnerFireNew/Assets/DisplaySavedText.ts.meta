@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/6ea08782-1f87-4cd1-8f05-44a702729b82>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 827f10d8-3e95-46a5-8ee2-707870377bfb
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 827f10d8-3e95-46a5-8ee2-707870377bfb
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9d6e7741-62fd-4829-8167-357efea3a8f9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9d6e7741-62fd-4829-8167-357efea3a8f9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e066643a-33f5-4ba5-940e-72501d3a4adb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    storageKey: false
+    targetTextObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - targetTextObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      storageKey: savedText
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject targetTextObject
+    - '// @input string storageKey = "savedText"'
