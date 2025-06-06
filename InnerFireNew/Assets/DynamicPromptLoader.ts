@@ -6,6 +6,7 @@ export class DisplaySelectedPrompt extends BaseScriptComponent {
     @input promptKey: string = "promptChoice";
 
     onAwake(): void {
+        print("🧠 onAwake called in DisplaySelectedPrompt");
 
         if (!this.targetTextObject) {
             print("❌ No targetTextObject assigned.");
