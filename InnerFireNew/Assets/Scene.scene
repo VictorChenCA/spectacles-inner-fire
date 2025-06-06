@@ -18192,12 +18192,15 @@
   Enabled: true
   ScriptAsset: !<reference> 699c48fa-b2db-45ab-a8c6-b9216f4b5fe4
   ScriptInputsDefault:
-    {}
+    storageKey: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      {}
+      prompt1: !<reference.SceneObject> b8717996-4150-495d-8117-a323545ecf8a
+      prompt2: !<reference.SceneObject> b810b1b2-e3de-4e1f-b295-e8c571b6c0dc
+      prompt3: !<reference.SceneObject> 231578e6-6d67-4904-bff5-e542eb40cc72
+      storageKey: sliderSelection
   ScriptTypes:
     "":
       {}

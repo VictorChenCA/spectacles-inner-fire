@@ -28,16 +28,24 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    prompt1: false
+    prompt2: false
+    prompt3: false
+    storageKey: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - prompt1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      prompt2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      prompt3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      storageKey: sliderSelection
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input SceneObject prompt1
+    - // @input SceneObject prompt2
+    - // @input SceneObject prompt3
+    - '// @input string storageKey = "sliderSelection"'
