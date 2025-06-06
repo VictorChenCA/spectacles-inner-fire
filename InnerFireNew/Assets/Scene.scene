@@ -1184,7 +1184,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Pinch the button below to move on!
+  Text: Reach out and pinch the button below!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6024,7 +6024,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -6448,7 +6448,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -6696,7 +6696,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -7700,7 +7700,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -18800,7 +18800,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "I'm ready to move on"
+  Text: "Let's continue"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19371,7 +19371,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "I'm Ready!"
+  Text: "I'm Ready"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -19753,8 +19753,8 @@
     scale: {x: 2.000000, y: 2.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> f80990a3-dfaf-49d8-8545-f3906b6a72de
     - !<own> 8f952d4e-c4c9-4c85-a219-4b42687bd3df
+    - !<own> f80990a3-dfaf-49d8-8545-f3906b6a72de
   Components:
     - !<own> 0b7d0434-ce77-4863-9281-8c5de4d82090
     - !<own> 85168ab9-b3bd-4610-b850-c1e7070e5600
@@ -21090,7 +21090,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -21287,7 +21287,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -21994,7 +21994,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 8
+  RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
