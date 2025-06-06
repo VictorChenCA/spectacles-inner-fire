@@ -5758,9 +5758,9 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.500000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 0.100000, y: 0.100000, z: 0.100000}
+    scale: {x: 0.150000, y: 0.150000, z: 0.150000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -7807,9 +7807,9 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.399666, z: 0.333333}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.010000, y: 0.010000, z: 0.010000}
+    position: {x: 0.000000, y: 0.500000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 0.150000, y: 0.150000, z: 0.150000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -11008,9 +11008,9 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.399666, z: 0.333333}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.010000, y: 0.133333, z: 0.133333}
+    position: {x: 0.000000, y: 0.500000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 0.150000, y: 0.150000, z: 0.150000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -14447,9 +14447,9 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.399666, z: 0.333333}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.010000, y: 0.010000, z: 0.010000}
+    position: {x: 0.000000, y: 0.500000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 0.150000, y: 0.150000, z: 0.150000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -14869,7 +14869,7 @@
       particle3: !<reference.SceneObject> 7a9455a0-94ff-4288-8caf-fb611684bae2
       particle4: !<reference.SceneObject> 9bb183ef-1fca-47e6-a537-2af90f07172f
       particle5: !<reference.SceneObject> a160192c-47d0-4348-bff4-2c33293e05ea
-      flickerTarget: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
+      flickerTarget: !<reference.SceneObject> e3f27684-0037-4fab-ab40-058767f76a46
       baseScale: !<float> 1.000000
       flickerAmplitude: 0.300000
       flickerFrequency: !<float> 8.000000
@@ -14914,12 +14914,12 @@
   PrefabRemaps:
     []
   Name: particles
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.399666, z: 0.333333}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.010000, y: 0.010000, z: 0.010000}
+    position: {x: 0.000000, y: 0.500000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 0.150000, y: 0.150000, z: 0.150000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -22207,7 +22207,7 @@
   PrefabRemaps:
     []
   Name: Log!
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.010000, z: -100.000000}
@@ -22307,7 +22307,7 @@
   PrefabRemaps:
     []
   Name: Display - Intro
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -22322,7 +22322,7 @@
   PrefabRemaps:
     []
   Name: Base Campfire
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -80.000000, z: -140.000000}

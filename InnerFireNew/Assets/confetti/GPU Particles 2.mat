@@ -403,8 +403,8 @@
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
     velocityMax:
       typeIdx: 4
-      value: {x: 5.000000, y: 15.000000, z: 5.000000}
+      value: {x: 5.000000, y: 10.000000, z: 5.000000}
     velocityMin:
       typeIdx: 4
-      value: {x: -5.000000, y: 5.000000, z: -5.000000}
+      value: {x: 0.000000, y: 5.000000, z: -15.000000}
   Pass: !<reference> 45617654-d13d-4cd1-8588-b60296b2d24b

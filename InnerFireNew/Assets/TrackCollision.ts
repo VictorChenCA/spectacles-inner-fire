@@ -21,6 +21,7 @@ export class NewScript extends BaseScriptComponent {
     @input flickerFrequency: number = 8.0;
 
     private hasCollided: boolean = false;
+    private triggeredOnce: boolean = false; // ✅ NEW FLAG
     private flickerStartTime: number = 0;
     private maxDuration: number = 10.0;
 
@@ -28,9 +29,10 @@ export class NewScript extends BaseScriptComponent {
     private currentSecond: number = -1;
 
     private scalePattern: number[] = [1, 4, 10, 9, 8, 7, 6, 5, 3, 1];
-
     private particles: SceneObject[] = [];
+    private initialRotation!: quat; // Add this up top
 
+    
     onAwake(): void {
         this.particles = [
             this.particle1,
@@ -40,23 +42,25 @@ export class NewScript extends BaseScriptComponent {
             this.particle5
         ];
 
+        if (this.flickerTarget) {
+            this.initialRotation = this.flickerTarget.getTransform().getLocalRotation();
+        }
+
         this.createEvent("UpdateEvent").bind(() => {
-            // Detect collision
-            if (!this.hasCollided && this.objectA && this.objectB) {
+            // Detect collision ONCE
+            if (!this.hasCollided && !this.triggeredOnce && this.objectA && this.objectB) {
                 const posA = this.objectA.getTransform().getWorldPosition();
                 const posB = this.objectB.getTransform().getWorldPosition();
                 const distance = posA.distance(posB);
 
                 if (distance <= this.collisionDistance) {
                     this.hasCollided = true;
+                    this.triggeredOnce = true; // ✅ Only once
                     this.flickerStartTime = getTime();
                     this.currentSecond = -1;
 
-                    // Enable specified objects
                     if (this.enableObject1) this.enableObject1.enabled = true;
                     if (this.enableObject2) this.enableObject2.enabled = true;
-
-                    // Disable specified objects
                     if (this.disableObject1) this.disableObject1.enabled = false;
                     if (this.disableObject2) this.disableObject2.enabled = false;
 
@@ -68,7 +72,6 @@ export class NewScript extends BaseScriptComponent {
                 const t = getTime() - this.flickerStartTime;
 
                 if (t <= this.maxDuration) {
-                    // 🔢 Update scaleInt each second
                     const sec = Math.floor(t);
                     if (sec !== this.currentSecond && sec < this.scalePattern.length) {
                         this.currentSecond = sec;
@@ -76,15 +79,26 @@ export class NewScript extends BaseScriptComponent {
                         print("📈 scaleInt = " + this.scaleInt);
                     }
 
-                    // 🔥 Flicker effect scaled by scaleInt
                     if (this.flickerTarget) {
-                        const flicker = this.baseScale + Math.sin(t * this.flickerFrequency) * this.flickerAmplitude;
-                        const scaledFlicker = flicker * this.scaleInt;
-                        const scaleVec = new vec3(scaledFlicker, scaledFlicker, scaledFlicker);
-                        this.flickerTarget.getTransform().setLocalScale(scaleVec);
-                    }
+                        const transform = this.flickerTarget.getTransform();
 
-                    // 🎲 Particle toggling logic
+                        // 🔥 Flicker scale (0.9 → 1.2), easing to 1.1
+                        const sine = Math.sin(t * this.flickerFrequency);
+                        const flickerScale = 1.1 + 0.3 * sine; // 1.1 ± 0.3 = [0.8, 1.4]
+                        const finalT = Math.min(t / this.maxDuration, 1);
+                        const easedT = finalT * finalT * (3 - 2 * finalT);
+                        const blendedScale = flickerScale * (1 - easedT) + 1.1 * easedT;
+                        transform.setLocalScale(new vec3(blendedScale, blendedScale, blendedScale));
+
+                        // 🔁 Spin 360° once, relative to original rotation
+                        const spinT = Math.min(t, 1.0);
+                        const spinAngleRad = spinT * Math.PI * 2;                // 0 → 2π radians
+                        const spinQuat = quat.angleAxis(spinAngleRad, vec3.up());            // create spin
+                        const finalQuat = this.initialRotation.multiply(spinQuat);           // instance method
+                        transform.setLocalRotation(finalQuat);
+                 }
+                         
+
                     const activationThreshold = 1.0 - (this.scaleInt / 10.0);
                     for (let i = 0; i < this.particles.length; i++) {
                         const obj = this.particles[i];
@@ -97,9 +111,9 @@ export class NewScript extends BaseScriptComponent {
                             obj.enabled = false;
                         }
                     }
+
                 } else {
-                    // ⏹ End of 10 seconds
-                    this.hasCollided = false;
+                    this.hasCollided = false; // Stops effect loop
 
                     if (this.flickerTarget) {
                         const resetScale = new vec3(this.baseScale, this.baseScale, this.baseScale);
