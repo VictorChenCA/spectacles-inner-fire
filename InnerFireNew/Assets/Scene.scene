@@ -17,6 +17,7 @@
     - !<own> 28954f43-fd4e-442a-838f-742e34372804
     - !<own> a719a854-46ec-4c81-9343-9077a47b0975
     - !<own> f446905a-f8fb-44cf-b002-0c54253d2748
+    - !<own> 96142f0e-6455-4894-bc89-704e5b44ab19
     - !<own> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
     - !<own> ff5a156f-c1df-4b36-aad1-b9659ab21c05
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
@@ -210,6 +211,82 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<Text/0034997a-c888-4298-91da-e72bf94790e2>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 9
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: 'Team 9 "Neon Panda Pack" - Victor, Saran, David, Anastasisa, Shawn'
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 16
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/00445c9e-61eb-4829-87d5-7de2e7234436>
   PrefabRemaps:
     []
@@ -12770,6 +12847,84 @@
   ScriptTypes:
     "":
       {}
+- !<Text/89b0d4eb-199c-40a5-95b8-3d12ed9d3305>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 9
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: |
+    Thank you for fueling your Inner Fire!
+
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 36
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/8ad87de4-fd43-49c5-986d-b5dbdb6fd232>
   PrefabRemaps:
     []
@@ -13635,6 +13790,21 @@
   Components:
     - !<own> 5599fbee-9de5-413a-af92-e31ce26affa6
     - !<own> 3f35cd14-94de-462b-8da5-f8816f4b7350
+- !<SceneObject/96142f0e-6455-4894-bc89-704e5b44ab19>
+  PrefabRemaps:
+    []
+  Name: Ending
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -500.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> e8ffcc9b-6e31-4f1b-bf2f-23ab4e5aea0e
+  Components:
+    - !<own> 89b0d4eb-199c-40a5-95b8-3d12ed9d3305
 - !<RenderMeshVisual/96452d7b-56e8-4d89-9d7a-4a2733893568>
   PrefabRemaps:
     []
@@ -14860,7 +15030,7 @@
       objectA: !<reference.SceneObject> d1d30270-cd52-4fe0-ba2c-4970f2fdf268
       objectB: !<reference.SceneObject> 78f0f653-2db5-4847-a9e6-82f14137759d
       collisionDistance: !<float> 25.000000
-      enableObject1: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
+      enableObject1: !<reference.SceneObject> 96142f0e-6455-4894-bc89-704e5b44ab19
       enableObject2: !<reference.SceneObject> 45f6d1e0-4a24-4673-989a-98aa4ed1f264
       disableObject1: !<reference.SceneObject> d1d30270-cd52-4fe0-ba2c-4970f2fdf268
       disableObject2: !<reference.SceneObject> 8ad87de4-fd43-49c5-986d-b5dbdb6fd232
@@ -14914,7 +15084,7 @@
   PrefabRemaps:
     []
   Name: particles
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.500000, z: 0.000000}
@@ -21333,6 +21503,21 @@
     CapitilizationOverride: None
   EnableBatching: false
   ShadowMode: None
+- !<SceneObject/e8ffcc9b-6e31-4f1b-bf2f-23ab4e5aea0e>
+  PrefabRemaps:
+    []
+  Name: Ending
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0034997a-c888-4298-91da-e72bf94790e2
 - !<SceneObject/e95a9885-b802-4f8b-b1d0-d15370893def>
   PrefabRemaps:
     []
@@ -22207,7 +22392,7 @@
   PrefabRemaps:
     []
   Name: Log!
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.010000, z: -100.000000}
@@ -22307,7 +22492,7 @@
   PrefabRemaps:
     []
   Name: Display - Intro
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -22322,7 +22507,7 @@
   PrefabRemaps:
     []
   Name: Base Campfire
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -80.000000, z: -140.000000}
