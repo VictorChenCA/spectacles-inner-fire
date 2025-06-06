@@ -28,7 +28,7 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    promptIndexKey: false
+    promptKey: false
     sliderKey: false
     targetTextObject: false
   ScriptTypesHidden:
@@ -38,11 +38,11 @@
   DefaultScriptInputs:
     - targetTextObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sliderKey: sliderSelection
-      promptIndexKey: promptSelection
+      promptKey: promptChoice
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject targetTextObject
     - '// @input string sliderKey = "sliderSelection"'
-    - '// @input string promptIndexKey = "savedNumber"'
+    - '// @input string promptKey = "promptChoice"'

@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/ad0a68b3-47a6-4f72-ad62-ad3299094620>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6e885e6c-d930-4990-88d8-1ed97ccccb67
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6e885e6c-d930-4990-88d8-1ed97ccccb67
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4e8a7cdc-e849-4630-9163-285d04fbab39
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4e8a7cdc-e849-4630-9163-285d04fbab39>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 07c2dae8-2dff-4e12-a93f-96a7b7916d1b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    storageKey: false
+    valueToSave: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - valueToSave: !<float> 0.000000
+      storageKey: sliderSelection
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float valueToSave
+    - '// @input string storageKey = "promptChoice"'
