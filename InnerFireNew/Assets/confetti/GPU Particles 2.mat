@@ -4,7 +4,54 @@
     - !<own> 985689d6-e0d6-4297-827a-eae41fa0c13c
 - !<PassInfo/985689d6-e0d6-4297-827a-eae41fa0c13c>
   CachedProperties:
-    []
+    - Port_AO_N014:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Default_N182:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Emissive_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input1_N154:
+        typeIdx: 1
+        value: 1.000000
+    - Port_LODValue_N166:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_SpecularAO_N014:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Value3_N194:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N194:
+        typeIdx: 1
+        value: 0.000000
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
   DepthWrite: false
   DepthTest: true
   DepthFunction: LessEqual
@@ -22,6 +69,9 @@
     - NODE_13_DROPLIST_ITEM 0
     - NODE_213_DROPLIST_ITEM 0
     - NODE_67_DROPLIST_ITEM 0
+    - MESHTYPE 0
+    - TRAILBEHAVIOR 0
+    - rotationSpace 0
   BlendMode: PremultipliedAlphaAuto
   Properties:
     ALIGNTOX:

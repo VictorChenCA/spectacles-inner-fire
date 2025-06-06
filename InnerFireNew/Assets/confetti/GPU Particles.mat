@@ -34,6 +34,9 @@
     - Port_LODValue_N166:
         typeIdx: 1
         value: 0.000000
+    - Port_Output_N136:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_Output_N208:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
@@ -88,6 +91,30 @@
     ALIGNTOZ:
       typeIdx: 2
       value: false
+    CENTER_BBOX:
+      typeIdx: 2
+      value: false
+    Port_Input0_N110:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N135:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N137:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N138:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N139:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N140:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N144:
+      typeIdx: 1
+      value: 0.000000
     Port_Input1_N068:
       typeIdx: 1
       value: 2.000000
@@ -241,13 +268,31 @@
     numValidFrames:
       typeIdx: 1
       value: 1.000000
+    randomRotationY:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
+    randomRotationZ:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
     rotationDrag:
       typeIdx: 1
       value: 1.000000
     rotationRandom:
       typeIdx: 3
       value: {x: -1.000000, y: 1.000000}
+    rotationRandomX:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
     rotationRate:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
+    rotationRateX:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
+    rotationRateY:
+      typeIdx: 3
+      value: {x: 0.000000, y: 0.000000}
+    rotationRateZ:
       typeIdx: 3
       value: {x: 0.000000, y: 0.000000}
     sNoiseFrequency:
