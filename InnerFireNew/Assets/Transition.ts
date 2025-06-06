@@ -25,10 +25,14 @@ export class Transition extends BaseScriptComponent {
 
     private handleTriggerEnd = (): void => {
         try {
+            print(`🔍 Press handler1 state: ${this.enableObjectA?.name} enabled = ${this.enableObjectA?.enabled}`);
+            print(`🔁 Enabling: ${this.enableObjectA?.name}, ${this.enableObjectB?.name}`);
             if (this.enableObjectA) this.enableObjectA.enabled = true;
             if (this.enableObjectB) this.enableObjectB.enabled = true;
+            print(`🚫 Disabling: ${this.disableObjectA?.name}, ${this.disableObjectB?.name}`);
             if (this.disableObjectA) this.disableObjectA.enabled = false;
             if (this.disableObjectB) this.disableObjectB.enabled = false;
+            print(`🔍 Press handler1 state: ${this.enableObjectA?.name} enabled = ${this.enableObjectA?.enabled}`);
         } catch (e) {
             print("Transition error: " + e);
         }
