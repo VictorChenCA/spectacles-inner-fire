@@ -22207,7 +22207,7 @@
   PrefabRemaps:
     []
   Name: Log!
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.010000, z: -100.000000}
@@ -22307,7 +22307,7 @@
   PrefabRemaps:
     []
   Name: Display - Intro
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -20.000000, z: -150.000000}
@@ -22322,7 +22322,7 @@
   PrefabRemaps:
     []
   Name: Base Campfire
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -80.000000, z: -140.000000}
