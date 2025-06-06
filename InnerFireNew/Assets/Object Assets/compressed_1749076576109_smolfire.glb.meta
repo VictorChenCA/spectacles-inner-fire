@@ -1,0 +1,158 @@
+- !<AssetImportMetadata/aca3d16b-a2b2-4c10-b7fc-e9f1a0c2a743>
+  ImportedAssetIds:
+    .hidden/Material.001: !<reference> 51fb075a-1130-4fc8-b458-e145faa0a82d
+    4a3e924fad0e2f27: !<reference> 407a58b1-7f2a-4b16-8caf-a3e1410a6af1
+    66780cf3a4dcb2b8: !<reference> 6015f07f-1b0b-41ec-b481-72c4297db5fb
+    Materials/Material.001: !<reference> 2a95728a-63ca-4e69-9a9a-350a698469b6
+    Materials/Material.001|Material.001|GraphPassInfo: !<reference> 340d994b-c6cc-4161-b5da-4933663b15c0
+    Meshes/texture_pbr_v128.001: !<reference> 86af53cd-ef42-4601-9916-de4d357eb1ef
+    Scene: !<reference> 0c695b05-88a6-4307-b4fe-87c4f92a18f4
+    Textures/empty: !<reference> 0cd4ac71-7ddc-4dd5-891f-b640b7a4367a
+    Textures/empty1: !<reference> 00aef067-f549-4621-be8c-9880acaf4abb
+    Textures/empty2: !<reference> d3bc1e9d-f822-477c-9998-d6542e171c1b
+    b7f62c5ee379063f: !<reference> 0e43ad2a-8e3d-43e5-805d-feb2b8a51665
+    da01d356556be62a: !<reference> 1c147921-2dc2-45f5-87ff-d098e61fae08
+    ddbb046f726aef81: !<reference> 78b4e3ac-c63c-4e46-b167-ebdfdd68bebd
+    e51c971d469c25e0: !<reference> af5c2477-c9d9-4411-9754-37c4c8fb52e2
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> 0c695b05-88a6-4307-b4fe-87c4f92a18f4
+  PackageType: LegacyPackage
+  PackagePolicy: CanBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 1e98543d-4414-44d8-b77f-0265a100c5e9
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 20.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+      Performance Compression: !<SingleCompressionSettings>
+        CompressorName: Performance
+        CompressionSettings: !<TextureCompressionMipmapSettings>
+          Level: Medium
+          Mipmap: false
+    ExtensionMappings:
+      mesh: None Compression
+      png: Performance Compression
+    Overrides:
+      {}
+- !<ObjectPrefabAssetData/1e98543d-4414-44d8-b77f-0265a100c5e9>
+  SourceRemaps:
+    - 0c695b05-88a6-4307-b4fe-87c4f92a18f4: a573d90c-1250-4b6d-a7d7-da1c294c6fce
+    - 0e43ad2a-8e3d-43e5-805d-feb2b8a51665: 71858c9e-b434-4fa5-9f0c-652a2f228c97
+    - 1c147921-2dc2-45f5-87ff-d098e61fae08: e0d4433d-705c-40db-ba49-141a3492401f
+    - 407a58b1-7f2a-4b16-8caf-a3e1410a6af1: d7321c98-c9b0-48fd-ba29-08e876e9ee9d
+    - 6015f07f-1b0b-41ec-b481-72c4297db5fb: 825dac33-7b6a-4bc1-94d7-ff8d040b5906
+    - 78b4e3ac-c63c-4e46-b167-ebdfdd68bebd: 4e94e87f-0255-4893-82c3-5476a832e6b9
+    - af5c2477-c9d9-4411-9754-37c4c8fb52e2: dc9844cd-017c-474f-8d4b-a45cf85a4742
+  SourceState: !<own> a573d90c-1250-4b6d-a7d7-da1c294c6fce
+- !<SceneObject/4e94e87f-0255-4893-82c3-5476a832e6b9>
+  PrefabRemaps:
+    []
+  Name: texture_pbr_v128
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 71858c9e-b434-4fa5-9f0c-652a2f228c97
+- !<RenderMeshVisual/71858c9e-b434-4fa5-9f0c-652a2f228c97>
+  PrefabRemaps:
+    []
+  Name: texture_pbr_v128.001
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2a95728a-63ca-4e69-9a9a-350a698469b6
+  Mesh: !<reference> 86af53cd-ef42-4601-9916-de4d357eb1ef
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/825dac33-7b6a-4bc1-94d7-ff8d040b5906>
+  PrefabRemaps:
+    []
+  Name: compressed_1749076576109_smolfire
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d7321c98-c9b0-48fd-ba29-08e876e9ee9d
+  Components:
+    []
+- !<ObjectPrefab/a573d90c-1250-4b6d-a7d7-da1c294c6fce>
+  PackagePath: ""
+  objects:
+    - !<own> 825dac33-7b6a-4bc1-94d7-ff8d040b5906
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/d7321c98-c9b0-48fd-ba29-08e876e9ee9d>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> dc9844cd-017c-474f-8d4b-a45cf85a4742
+  Components:
+    []
+- !<SceneObject/dc9844cd-017c-474f-8d4b-a45cf85a4742>
+  PrefabRemaps:
+    []
+  Name: convert
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4e94e87f-0255-4893-82c3-5476a832e6b9
+  Components:
+    - !<own> e0d4433d-705c-40db-ba49-141a3492401f
+- !<AnimationPlayer/e0d4433d-705c-40db-ba49-141a3492401f>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []

@@ -1,0 +1,96 @@
+- !<ObjectPrefab/c2e2fed6-977e-450a-84ef-cd93a424b6a4>
+  PackagePath: ""
+  objects:
+    - !<own> 4fe74417-6d42-4f3c-b72b-5ac1657b101f
+  LazyLoading: false
+  RetainAssets: true
+- !<AnimationPlayer/22f26d8e-3889-4ed2-9c4f-b913134a272e>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<RenderMeshVisual/3d95fdb8-540e-48b3-b9b4-c5023d110429>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 70b5f7a9-5793-4461-a385-298995a195b0
+    - !<reference> a58ca21a-d0b8-475e-9c66-67e88336cc88
+  Mesh: !<reference> ac8c1952-9e07-4353-b6ef-341e2662ab5d
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/4fe74417-6d42-4f3c-b72b-5ac1657b101f>
+  PrefabRemaps:
+    []
+  Name: fire model
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: -10.000000, y: 7.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 20.000000, y: 20.000000, z: 20.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b41b053c-cdd5-42a2-95ad-69f6286a70f2
+  Components:
+    []
+- !<SceneObject/b41b053c-cdd5-42a2-95ad-69f6286a70f2>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> bb6b9689-1e74-469f-978b-76527e4e74a9
+  Components:
+    []
+- !<SceneObject/bb216ae8-4bc0-45fe-8510-53b78a9bbca8>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3d95fdb8-540e-48b3-b9b4-c5023d110429
+- !<SceneObject/bb6b9689-1e74-469f-978b-76527e4e74a9>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> bb216ae8-4bc0-45fe-8510-53b78a9bbca8
+  Components:
+    - !<own> 22f26d8e-3889-4ed2-9c4f-b913134a272e

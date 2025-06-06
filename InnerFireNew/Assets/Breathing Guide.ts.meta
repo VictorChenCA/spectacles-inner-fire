@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/da90b91a-33f1-4b38-800e-f8de12187942>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1c6575fe-04f0-4fc6-a320-f5b5116d5d2c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1c6575fe-04f0-4fc6-a320-f5b5116d5d2c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 595416b8-643b-46cb-bb41-98b0cf2c2ec0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/595416b8-643b-46cb-bb41-98b0cf2c2ec0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a62cfe54-c59b-4af6-b289-08844053a8dd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    targetToDisable: false
+    targetToEnable: false
+    textObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - textObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject textObject {"hint":"SceneObject with a Text component"}'
+    - '// @input SceneObject targetToEnable {"hint":"Object to enable after breathing cycle"}'
+    - '// @input SceneObject targetToDisable {"hint":"Object to disable after breathing cycle"}'

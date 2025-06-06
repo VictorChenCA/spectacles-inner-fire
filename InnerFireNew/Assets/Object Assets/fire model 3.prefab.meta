@@ -1,0 +1,122 @@
+- !<AssetImportMetadata/ef07ebc9-f623-4dc1-8ad2-b6238a19bc24>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 2fa7637c-6527-473f-8c95-c9ff308f1125
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 2fa7637c-6527-473f-8c95-c9ff308f1125
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 07bc248c-c7b4-4c7d-a41a-345eb39aa9e8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/07bc248c-c7b4-4c7d-a41a-345eb39aa9e8>
+  SourceRemaps:
+    - 2fa7637c-6527-473f-8c95-c9ff308f1125: 8af5cbcf-9d99-4b25-8415-8301b65f62aa
+    - 44914d1d-eb7d-4547-9f01-ac85d321ae2b: 32eada52-c86d-4395-b758-207bb426e2dd
+    - 703f982c-c1ba-4810-88f1-ade87ca37b65: 6b22a536-14cd-43c5-a184-ac7d285951bc
+    - a17c59b7-d861-48b4-968a-3d5b0f3c526f: d1dd7673-dbfe-45c6-98f7-1e863734ebca
+    - c15e6eaf-9081-4644-a3e3-159d66a7f42e: eb1d90c5-60f8-44aa-a453-f58cdfa4e992
+    - cc935aac-2504-42a0-b4a8-96cd8a6e260a: cefaff4e-b0f0-4110-9152-c1f333b69e62
+    - d576820b-2c2f-4512-ab47-d600a99a778e: 31038832-3ac2-4a4c-a074-936f3754df49
+  SourceState: !<own> 8af5cbcf-9d99-4b25-8415-8301b65f62aa
+- !<SceneObject/31038832-3ac2-4a4c-a074-936f3754df49>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 32eada52-c86d-4395-b758-207bb426e2dd
+  Components:
+    []
+- !<SceneObject/32eada52-c86d-4395-b758-207bb426e2dd>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d1dd7673-dbfe-45c6-98f7-1e863734ebca
+  Components:
+    - !<own> 6b22a536-14cd-43c5-a184-ac7d285951bc
+- !<AnimationPlayer/6b22a536-14cd-43c5-a184-ac7d285951bc>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<ObjectPrefab/8af5cbcf-9d99-4b25-8415-8301b65f62aa>
+  PackagePath: ""
+  objects:
+    - !<own> cefaff4e-b0f0-4110-9152-c1f333b69e62
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/cefaff4e-b0f0-4110-9152-c1f333b69e62>
+  PrefabRemaps:
+    []
+  Name: fire model 3
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -10.000000, y: 10.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 20.000000, y: 20.000000, z: 20.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 31038832-3ac2-4a4c-a074-936f3754df49
+  Components:
+    []
+- !<SceneObject/d1dd7673-dbfe-45c6-98f7-1e863734ebca>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> eb1d90c5-60f8-44aa-a453-f58cdfa4e992
+- !<RenderMeshVisual/eb1d90c5-60f8-44aa-a453-f58cdfa4e992>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7dec4144-b966-4a5a-bc4b-dffd983b2c82
+    - !<reference> a58ca21a-d0b8-475e-9c66-67e88336cc88
+  Mesh: !<reference> f4e4bc3d-a024-4976-975c-a1df19203511
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

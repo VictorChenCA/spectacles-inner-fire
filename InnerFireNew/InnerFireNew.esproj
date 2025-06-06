@@ -24,7 +24,7 @@ metaInfo:
     []
   tags:
     []
-  lensName: InnerFire New
+  lensName: InnerFire
   lensDescriptors:
     - GEN_AI_ICON
   lensApplicability:
@@ -33,8 +33,8 @@ metaInfo:
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: c521a26acd5657b0900d6674d09a662f
-  videoPreviewHash: ""
+  iconHash: b8ed4e1c326705ca226881b5b80d5232
+  videoPreviewHash: 8a9aa8d68665c05b8ea614fa2f469366
   fromTemplateName: Spectacles
   fromTemplateUrl: Lens Studio 5.9.0.25050505
   activationCamera: Front
