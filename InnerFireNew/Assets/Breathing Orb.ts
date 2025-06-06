@@ -1,10 +1,9 @@
 @component
 export class BreathingScaleGuide extends BaseScriptComponent {
     @input
-    textObject1!: SceneObject; // main guide text
+    textObject1!: SceneObject;
     @input
-    textObject2!: SceneObject; // countdown / "Ready?"
-
+    textObject2!: SceneObject;
     @input
     targetObject!: SceneObject;
 
@@ -19,22 +18,26 @@ export class BreathingScaleGuide extends BaseScriptComponent {
     pauseDuration: number = 4;
 
     @input
-    targetToEnable!: SceneObject;
+    targetToEnable1!: SceneObject;
     @input
-    targetToDisable!: SceneObject;
+    targetToEnable2!: SceneObject;
+    @input
+    targetToDisable1!: SceneObject;
+    @input
+    targetToDisable2!: SceneObject;
 
     private primaryText!: Text;
     private secondaryText!: Text;
     private transform!: Transform;
 
     private timer = 0;
-    private phase = 0; // 0: inhale, 1: hold1, 2: exhale, 3: hold2
+    private phase = 0;
     private currentLoop = 0;
     private readonly totalLoops = 3;
 
-    private countdownNumbers: string[] = [];
-    private lastCountdownIndex: number = -1;
+    private lastCountdownIndex = -1;
     private readyShown = false;
+    private textFrozen = false;
 
     private readonly labels = [
         "Inhale through your nose",
@@ -52,9 +55,9 @@ export class BreathingScaleGuide extends BaseScriptComponent {
             throw new Error("Missing required components");
         }
 
-        this.primaryText.text = "Let's start with a deep breath";
-        this.secondaryText.text = "";
         this.transform.setLocalScale(this.originalScale);
+        this.primaryText.text = "Let's start with a deep breath"; // Fix: show this from the beginning
+        this.secondaryText.text = "";
 
         this.createEvent("UpdateEvent").bind(this.onUpdate);
     }
@@ -63,43 +66,45 @@ export class BreathingScaleGuide extends BaseScriptComponent {
         const dt = getDeltaTime();
         this.timer += dt;
 
-        // Scale handling
+        const isFirstCycle = this.currentLoop === 0;
+
+        // Scale animation for inhale/exhale only
         if (this.phase === 0) {
-            // Inhale (scale up)
             const t = this.smoothstep(this.timer / this.duration);
             this.transform.setLocalScale(vec3.lerp(this.originalScale, this.targetScale, t));
         } else if (this.phase === 2) {
-            // Exhale (scale down)
             const t = this.smoothstep(this.timer / this.duration);
             this.transform.setLocalScale(vec3.lerp(this.targetScale, this.originalScale, t));
         }
 
-        // Countdown handling for loops after the first
-        if (this.currentLoop > 0) {
-            const phaseDuration = this.getPhaseDuration(this.phase);
-            const countdown = this.getCountdownSequence(phaseDuration);
-            const slice = phaseDuration / countdown.length;
-            const index = Math.floor(this.timer / slice);
+        // Countdown: Show 3-2-1 during all phases, in all cycles
+        const phaseDuration = this.getPhaseDuration(this.phase);
+        const countdown = this.getCountdownSequence(phaseDuration);
+        const slice = phaseDuration / countdown.length;
+        const index = Math.floor(this.timer / slice);
 
-            if (index !== this.lastCountdownIndex && index < countdown.length) {
+        if (index !== this.lastCountdownIndex && index < countdown.length) {
+            // Special case: Ready? first during first cycle exhale
+            if (isFirstCycle && this.phase === 2 && !this.readyShown) {
+                this.secondaryText.text = "Ready?";
+                this.readyShown = true;
+                this.lastCountdownIndex = -1;
+            } else {
                 this.secondaryText.text = countdown[index];
                 this.lastCountdownIndex = index;
             }
         }
 
-        const currentDuration = this.getPhaseDuration(this.phase);
-
-        // Phase transition
-        if (this.timer >= currentDuration) {
+        // Phase complete
+        if (this.timer >= phaseDuration) {
             this.timer = 0;
             this.phase++;
             this.lastCountdownIndex = -1;
+            this.readyShown = false;
 
-            // End of full loop
             if (this.phase >= 4) {
                 this.currentLoop++;
                 this.phase = 0;
-                this.readyShown = false;
 
                 if (this.currentLoop >= this.totalLoops) {
                     this.finishCycle();
@@ -107,25 +112,15 @@ export class BreathingScaleGuide extends BaseScriptComponent {
                 }
             }
 
-            if (this.currentLoop === 0) {
-                // During the first full cycle, keep the primary text fixed
-                this.primaryText.text = "Let's start with a deep breath";
-                this.secondaryText.text = ""; // Clear countdown between phases
-            } else {
-                this.primaryText.text = this.labels[this.phase];
-                this.secondaryText.text = ""; // Clear countdown between phases
+            if (!this.textFrozen) {
+                if (isFirstCycle) {
+                    this.primaryText.text = "Let's start with a deep breath";
+                    this.secondaryText.text = "";
+                } else {
+                    this.primaryText.text = this.labels[this.phase];
+                    this.secondaryText.text = "";
+                }
             }
-            
-        }
-
-        // Special case: show "Ready?" once, after hold1 of first cycle
-        if (
-            this.currentLoop === 0 &&
-            this.phase === 2 && // exhale
-            !this.readyShown
-        ) {
-            this.secondaryText.text = "Ready?";
-            this.readyShown = true;
         }
     };
 
@@ -140,9 +135,12 @@ export class BreathingScaleGuide extends BaseScriptComponent {
     private finishCycle(): void {
         this.primaryText.text = "";
         this.secondaryText.text = "";
+        this.textFrozen = true;
 
-        if (this.targetToEnable) this.targetToEnable.enabled = true;
-        if (this.targetToDisable) this.targetToDisable.enabled = false;
+        if (this.targetToEnable1) this.targetToEnable1.enabled = true;
+        if (this.targetToEnable2) this.targetToEnable2.enabled = true;
+        if (this.targetToDisable1) this.targetToDisable1.enabled = false;
+        if (this.targetToDisable2) this.targetToDisable2.enabled = false;
     }
 
     private smoothstep(x: number): number {

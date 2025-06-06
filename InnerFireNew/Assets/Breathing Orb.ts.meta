@@ -33,8 +33,10 @@
     pauseDuration: false
     targetObject: false
     targetScale: false
-    targetToDisable: false
-    targetToEnable: false
+    targetToDisable1: false
+    targetToDisable2: false
+    targetToEnable1: false
+    targetToEnable2: false
     textObject1: false
     textObject2: false
   ScriptTypesHidden:
@@ -49,8 +51,10 @@
       targetScale: !<Vec3> {x: 0.900000, y: 0.900000, z: 0.900000}
       duration: !<float> 4.000000
       pauseDuration: !<float> 2.000000
-      targetToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      targetToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToEnable1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToEnable2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToDisable1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetToDisable2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -61,6 +65,8 @@
     - "// @input vec3 originalScale = {0.3,0.3,0.3}"
     - "// @input vec3 targetScale = {0.9,0.9,0.9}"
     - // @input float duration = 4
-    - // @input float pauseDuration = 4
-    - // @input SceneObject targetToEnable
-    - // @input SceneObject targetToDisable
+    - // @input float pauseDuration = 3
+    - // @input SceneObject targetToEnable1
+    - // @input SceneObject targetToEnable2
+    - // @input SceneObject targetToDisable1
+    - // @input SceneObject targetToDisable2
