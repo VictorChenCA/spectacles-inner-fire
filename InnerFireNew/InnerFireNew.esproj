@@ -34,7 +34,7 @@ metaInfo:
     - Spectacles
   platformBundlesEnabled: false
   iconHash: b8ed4e1c326705ca226881b5b80d5232
-  videoPreviewHash: 6d4b43b3bf03d9779216b00f924d2af0
+  videoPreviewHash: ""
   fromTemplateName: Spectacles
   fromTemplateUrl: Lens Studio 5.9.0.25050505
   activationCamera: Front
