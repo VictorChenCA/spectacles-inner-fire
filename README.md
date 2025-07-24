@@ -2,13 +2,11 @@
 
 **InnerFire** is a real-time XR journaling experience where users create logs through mindful breathing, reflection, and voice journaling, which fuel a persistent, interactive flame. The flame adapts and evolves across sessions, encouraging repeat use and emotional reflection.
 
-🔗 [Portfolio Site (Design, Media, Process)](https://d4xr.notion.site/Team-4-Neon-Panda-Pack-1ee2fe62373680aa9b11e6580f9a62b9)  
+🔗 [Portfolio Site (Design, Media, Process)](https://d4xr.notion.site/Team-4-Neon-Panda-Pack-1ee2fe62373680aa9b11e6580f9a62b9) 
+
 💛 [Launch the Lens](https://www.spectacles.com/lens/4b75bc71480e4ac2bd81de92b42f55e8?type=SNAPCODE&metadata=01)
 
-## 🎥 Demo
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MaDyfua4cXI" frameborder="0" allowfullscreen></iframe>
-[Watch on YouTube](https://www.youtube.com/watch?v=MaDyfua4cXI)
+👉 [Watch the demo on YouTube](https://www.youtube.com/watch?v=MaDyfua4cXI)
 
 ## 🛠 System Overview
 
